@@ -1,17 +1,20 @@
 ClickJacket
 ==
 "Best-for-now" iframe protection to only allow iframes for any given protocols and/or domains. Replaces page html
-when viewed from an origin that is not allowed. [OWASP](https://www.owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet)
+when viewed from an origin that is not allowed.
 
 ## Config
 
-#### allowedDomains [String]
+#### allowedDomains
+type: `[String]`
 The domains to allow from an iframe. Allows all domains if not given.
 
-#### allowedProtocols [String]
+#### allowedProtocols
+type: `[String]`
 The protocols to allow from an iframe. Allows all protocols if not given.
 
-#### failureMessage String
+#### failureMessage
+type: `String`
 If an iframe fails to pass validation, this message replaces the page's html. Defaults to '';
 
 ## Usage
@@ -48,7 +51,7 @@ If an iframe fails to pass validation, this message replaces the page's html. De
     <script src="clickjacket.min.js"></script>
     <script>
      // Replaces the page html when viewed in an
-    // iframe using an https protocol.
+    // iframe not using an https protocol.
     (new ClickJacket({
         allowedProtocols: ['https']
     })).runCheck();
@@ -68,9 +71,9 @@ If an iframe fails to pass validation, this message replaces the page's html. De
 <body>
     <script src="clickjacket.min.js"></script>
     <script>
-     // Replaces the page html when viewed in an
-    // iframe using an https protocol.
+     // Replaces the page html with a failure message.
     (new ClickJacket({
+        allowedDomains: ['cooldomain.com', 'cooldomain.io'],
         allowedProtocols: ['https'],
         failureMessage: 'This site cannot be viewed from this iframe.'
     })).runCheck();
