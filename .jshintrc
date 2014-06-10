@@ -1,0 +1,22 @@
+{
+    "camelcase": true,
+    "curly": true,
+    "indent": 4,
+    "eqeqeq": true,
+    "trailing": true,
+    "maxcomplexity": 10,
+    "maxlen": 120,
+    "unused": true,
+    "undef": true,
+    "sub": true,
+    "browser": true,
+    "globals": {
+        "expect": true,
+        "describe": true,
+        "xdescribe": true,
+        "it" : true,
+        "xit": true,
+        "spyOn": true,
+        "ClickJacket": true
+    }
+}
