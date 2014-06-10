@@ -7,14 +7,17 @@ when viewed from an origin that is not allowed.
 
 #### allowedDomains
 type: `[String]`
+
 The domains to allow from an iframe. Allows all domains if not given.
 
 #### allowedProtocols
 type: `[String]`
+
 The protocols to allow from an iframe. Allows all protocols if not given.
 
 #### failureMessage
 type: `String`
+
 If an iframe fails to pass validation, this message replaces the page's html. Defaults to '';
 
 ## Usage
