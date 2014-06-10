@@ -64,7 +64,7 @@ If an iframe fails to pass validation, this message replaces the page's html. De
 ```
 
 ```html
-<!-- Show specialize message -->
+<!-- Show specialized message -->
 <!doctype html>
 <html>
 <head>
