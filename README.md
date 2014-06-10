@@ -33,7 +33,7 @@ If an iframe fails to pass validation, this message replaces the page's html. De
     <script src="clickjacket.min.js"></script>
     <script>
     // Replaces the page html when viewed in an
-    // iframe not at the cooldomain.com or coolcomain.io domains.
+    // iframe not at the cooldomain.com or cooldomain.io domains.
     (new ClickJacket({
         allowedDomains: ['cooldomain.com', 'cooldomain.io']
     })).runCheck();
