@@ -34,6 +34,7 @@ describe('ClickJacket', function() {
 
         expect(cj.domainIsValid('fake-domain.com')).toBe(true);
         expect(cj.domainIsValid('.fake-domain.com')).toBe(true);
+        expect(cj.domainIsValid('sub1.fake-domain.com')).toBe(true);
         expect(cj.domainIsValid('.fake-domain2.io')).toBe(true);
         expect(cj.domainIsValid('.ffake-domain.com')).toBe(false);
         expect(cj.domainIsValid('.fake-domain2.com')).toBe(false);
